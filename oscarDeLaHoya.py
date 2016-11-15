@@ -9,7 +9,7 @@ soup = BeautifulSoup(url, "lxml")
 
 x = 0
 
-for i in soup.find_all('table', class_="wikitable")[1]:
+for i in soup.find_all('table', class_="wikitable")[1:2]:
 	for row in i.find_all('tr'):
 		y = 0
 		for name in row.find_all('td', style="text-align:left;")[0:1]:
