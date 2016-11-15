@@ -21,11 +21,11 @@ for i in soup.find_all('table', class_="wikitable")[1:2]:
 				y = y + 1
 				pass
 		for result in row.find_all('td')[1:2]:
-				if y == 0:
-					try:
-						file.write(result.text+'\n')
-					except UnicodeEncodeError as e:
-						errorFile.write(str(x)+' '+str(e)+'\n')
-						pass
+			if y == 0:
+				try:
+					file.write(result.text+'\n')
+				except UnicodeEncodeError as e:
+					errorFile.write(str(x)+' '+str(e)+'\n')
+					pass
 file.close()
 errorFile.close()
